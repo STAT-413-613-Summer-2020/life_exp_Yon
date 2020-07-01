@@ -15,7 +15,38 @@ library(tidyverse)
 library(gapminder)
 ```
 
-## Pretty Title-
+## Abstract-
+
+re-examine the analysis of Oeppen and Vaupel (2002).
+
+## Analysis-
+```{r}
+gap_un<- gapminder_unfiltered
+attach(gap_un)
+```
+```{r}
+gap_un %>% 
+  group_by(year) %>% 
+  filter(lifeExp == max(lifeExp)) %>% 
+  ungroup() %>% 
+  select(year, country, lifeExp) %>% 
+  arrange(year)->
+  sumdat
+sumdat
+```
+
+```{r}
+sumdat %>% 
+  ggplot(aes(x=year, y=lifeExp)) +
+  geom_point(aes(color = country)) +
+  theme_bw()+
+  geom_smooth(method = "lm", se = FALSE) +
+  xlab("Year") +
+  ylab("Maximum Life Expectancy") 
+```
+
+
+
 
 
 
