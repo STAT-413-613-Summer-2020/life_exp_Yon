@@ -50,7 +50,7 @@ sumdat %>%
 ```
 
 
-More lines to practice git branching. 
+More lines to practice git branching and a little more.
 
 
 
