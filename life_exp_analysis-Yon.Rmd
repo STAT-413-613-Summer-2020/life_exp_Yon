@@ -1,0 +1,22 @@
+---
+title: "Life exp analysis"
+author: "Yon Garber"
+date: "7/1/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r, message=FALSE}
+library(tidyverse)
+library(gapminder)
+```
+
+## Pretty Title-
+
+
+
+
